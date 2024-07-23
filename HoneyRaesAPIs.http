@@ -1,0 +1,6 @@
+@HoneyRaesAPIs_HostAddress = http://localhost:5043
+
+GET {{HoneyRaesAPIs_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
