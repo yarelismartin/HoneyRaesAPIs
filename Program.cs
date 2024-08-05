@@ -20,8 +20,8 @@ List<ServiceTicket> serviceTickets = new List<ServiceTicket>
     new ServiceTicket(1, 888, 480,"Fix light switch", false, new DateTime(2020, 7, 16)),
     new ServiceTicket(2, 589, null,"Replace outlet", true, null),
     new ServiceTicket(3,410, 480,"Repairing electrical wiring in the kitchen", false, new DateTime(2024, 7, 27)),
-    new ServiceTicket(4,790, 480,"Repairing roof after storm damage", true,  null),
-    new ServiceTicket(5, 790, 490,"Clearing debris and fixing gutters after storm", true, new DateTime(2024, 6, 2)),
+    new ServiceTicket(4,790, null,"Repairing roof after storm damage", true,  null),
+    new ServiceTicket(5, 790, null,"Clearing debris and fixing gutters after storm", true, null),
 };
 
 
@@ -143,7 +143,7 @@ app.MapPut("/api/servicetickets/{id}", (int id, ServiceTicket serviceTicket) =>
     {
         return Results.NotFound();
     }
-    //the id in the request route doesn't match the id from the ticket in the request body. That's a bad request!
+    //the  idin the request route doesn't match the id from the ticket in the request body. That's a bad request!
     if (id != serviceTicket.Id)
     {
         return Results.BadRequest();
